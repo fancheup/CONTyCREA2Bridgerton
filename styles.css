@@ -1,0 +1,240 @@
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ebe6e1;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('../imagenes/fondo2.jpg');
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+    background-size: 30%;
+}
+
+/* Encabezado */
+header {
+    background-color: #8d678b;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navegación */
+nav {
+    background-color: #b7abb9;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 1.5rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d7ccc8;
+}
+
+/* Secciones principales */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.welcome-section {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    border-left: 5px solid #b7abb9;
+}
+
+.subscription-section {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 40px; /* Aumentamos este valor */
+}
+
+.subscription-section h2 {
+    color: #b7abb9;
+    font-family: 'Playfair Display', serif;
+    margin-top: 0;
+}
+
+/* Formulario de suscripción */
+#subscription-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    max-width: 100%;
+    width: 100%; /* Asegura que el formulario ocupe todo el ancho disponible */
+}
+
+#subscription-form input {
+    padding: 0.8rem;
+    width: 60%; /* Porcentaje del ancho del formulario */
+    max-width: 350px; /* Máximo ancho permitido */
+    min-width: 200px; 
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+    box-sizing: border-box; 
+}
+
+#subscription-form button {
+    padding: 0.8rem 1.5rem;
+    background-color: #b7abb9;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+    flex-shrink: 0; 
+}
+
+#subscription-form button:hover {
+    background-color: #9a8a9b;
+}
+
+/* Pie de página */
+footer {
+    background-color: #8d678b;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Banner */
+img[src="../imagenes/banner.png"] {
+    display: block;
+    margin: 60px auto 0; /* Aumentamos el margen superior */
+    max-width: 100%;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+/* Encabezado */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.home-logo, .login-logo {
+    color: #fff;
+    font-size: 2rem;
+    transition: transform 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.home-logo:hover, .login-logo:hover {
+    color: #d7ccc8;
+    transform: scale(1.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+        margin: 1rem 0;
+        order: 2;
+    }
+    
+    .home-logo {
+        align-self: flex-start;
+        order: 1;
+    }
+    
+    .login-logo {
+        align-self: flex-end;
+        order: 3;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 0.5rem 0;
+    }
+    
+    #subscription-form {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #subscription-form input {
+        width: 80%;
+        border-radius: 4px;
+        margin-bottom: 0.5rem;
+    }
+    
+    #subscription-form button {
+        width: 80%;
+        border-radius: 4px;
+    }
+}
+/* Estilos para formularios de registro/login */
+.subscription-section input[type="password"],
+.subscription-section input[type="email"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.subscription-section button[type="submit"] {
+    background-color: #8d678b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.subscription-section button:hover {
+    background-color: #b7abb9;
+}

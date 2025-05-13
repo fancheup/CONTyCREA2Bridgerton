@@ -1,0 +1,67 @@
+/* Estilos específicos para la página de novedades */
+.novedades-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.novedades-container h2 {
+    text-align: center;
+    color: #6d4c41;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.columnas-novedades {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.columna {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.columna h3 {
+    background-color: #6d4c41;
+    color: white;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.confirmado h3 {
+    background-color: #a0ae64; /* Verde para confirmado */
+}
+
+.rumores h3 {
+    background-color: #95966c; /* Rojo para rumores */
+}
+
+.contenido-columna {
+    padding: 1.5rem;
+    min-height: 200px;
+}
+
+.contenido-columna p {
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .columnas-novedades {
+        flex-direction: column;
+    }
+    
+    .columna {
+        width: 100%;
+    }
+}
